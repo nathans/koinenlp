@@ -123,11 +123,10 @@ def simplify_tag(tag):
     # Derived from examples here:
     # http://nltk.googlecode.com/svn/trunk/doc/api/nltk.tag.simplify-pysrc.html
 
-    try:
-        if '-' in tag:
-            tag = tag.split('-')[0]
+    if '-' in tag:
+        tag = tag.split('-')[0]
         return tag
-    except:
+    else:
         return tag
 
 
@@ -199,11 +198,11 @@ def remove_elision(text, diacritics=False):
         text = text.replace(orig, removed)
     return text
 
-
-def remove_assimilation(text):
-    """Return the given text with all instances of assimilation normalized."""
-
-    pass
+# TODO assimilation - decide scope
+# def remove_assimilation(text):
+#    """Return the given text with all instances of assimilation normalized."""
+#
+#    pass
 
 
 def remove_punctuation(text):

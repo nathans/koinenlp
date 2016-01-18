@@ -55,6 +55,12 @@ class KoinenlpTest(unittest.TestCase):
         case = koinenlp.remove_elision(self.tests["remove_elision_2"]["case"])
         self.assertEqual(case, self.tests["remove_elision_2"]["result"])
 
+    # Elision when input has diacritics
+    def test_remove_elision_3(self):
+        case = koinenlp.remove_elision(self.tests["remove_elision_3"]["case"],
+                                       diacritics=True)
+        self.assertEqual(case, self.tests["remove_elision_3"]["result"])
+
     def test_remove_punctuation(self):
         case = koinenlp.remove_punctuation(
             self.tests["remove_punctuation"]["case"])
