@@ -19,11 +19,13 @@ class KoinenlpTest(unittest.TestCase):
         self.tests.update(json.loads(tests_text))
 
     def test_strip_diacritics(self):
-        case = koinenlp.strip_diacritics(self.tests["strip_diacritics"]["case"])
+        case = koinenlp.strip_diacritics(
+            self.tests["strip_diacritics"]["case"])
         self.assertEqual(case, self.tests["strip_diacritics"]["result"])
 
     def test_unicode_normalize(self):
-        case = koinenlp.unicode_normalize(self.tests["unicode_normalize"]["case"])
+        case = koinenlp.unicode_normalize(
+            self.tests["unicode_normalize"]["case"])
         self.assertEqual(case, self.tests["unicode_normalize"]["result"])
 
     def test_final_sigma(self):
