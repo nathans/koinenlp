@@ -18,6 +18,15 @@ class KoinenlpTest(unittest.TestCase):
         self.tests = {}
         self.tests.update(json.loads(tests_text))
 
+    def test_simplify_tag_1(self):
+        case = koinenlp.simplify_tag("VAI-AAI3S")
+        self.assertEqual(case, "VAI")
+
+    # Second test to ensure that already-simple tags don't get mangled
+    def test_simplify_tag_2(self):
+        case = koinenlp.simplify_tag("C")
+        self.assertEqual(case, "C")
+
     def test_strip_diacritics(self):
         case = koinenlp.strip_diacritics(
             self.tests["strip_diacritics"]["case"])
