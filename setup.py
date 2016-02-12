@@ -4,7 +4,7 @@ from distutils.core import setup
 
 setup(name='koine-nlp',
       version='0.1',
-      description='',
+      description='A library for common NLP-related tasks for Koine Greek.',
       long_description=open("README.rst").read(),
       author='Nathan D. Smith',
       author_email='nathan@smithfam.info',
