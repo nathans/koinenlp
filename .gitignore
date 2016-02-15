@@ -2,3 +2,6 @@
 bin/
 include/
 lib/
+doc/_build
+doc/_templates
+doc/_static
