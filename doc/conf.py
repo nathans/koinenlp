@@ -255,7 +255,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'koine-nlp', 'koine-nlp Documentation',
+    ('api', 'koinenlp', 'koinenlp API reference',
      [author], 1)
 ]
 
@@ -285,3 +285,7 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# Local
+html_copy_source=False
+html_show_sourcelink=False
