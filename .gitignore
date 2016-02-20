@@ -6,4 +6,5 @@ lib/
 doc/_build
 doc/_templates
 doc/_static
-doc/sync.shMANIFEST
+doc/sync.sh
+MANIFEST
