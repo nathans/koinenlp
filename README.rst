@@ -2,13 +2,6 @@
 koine-nlp
 =========
 
-.. image:: https://travis-ci.org/nathans/koine-nlp.svg?branch=master
-	   :target: https://travis-ci.org/nathans/koine-nlp
-	      
-.. image:: https://coveralls.io/repos/github/nathans/koine-nlp/badge.svg?branch=master
-	   :target: https://coveralls.io/github/nathans/koine-nlp?branch=master
-
-
 About
 =====
 
