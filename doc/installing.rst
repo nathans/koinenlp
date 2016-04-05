@@ -35,6 +35,6 @@ Obtain the koine-nlp source archive by cloning its git repository:
 
 .. code-block:: bash
 
-   git clone https://github.com/nathans/koine-nlp.git
+   git clone https://scm.smithfam.info/nathan/koinenlep.git
    cd koine-nlp
    python setup.py install
