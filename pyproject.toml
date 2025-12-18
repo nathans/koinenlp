@@ -31,4 +31,5 @@ build-backend = "uv_build"
 dev = [
     "coverage>=7.13.0",
     "ruff>=0.14.10",
+    "sphinx>=9.0.4",
 ]
