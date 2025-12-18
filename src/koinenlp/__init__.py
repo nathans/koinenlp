@@ -33,84 +33,86 @@ import unicodedata
 # UTF-8 with final sigmas.
 # http://sourceforge.net/projects/perseus-hopper/
 # Path: sgml/reading/properties/stoplists/greek.stop
-stopwords = ["μή",
-             "ἑαυτοῦ",
-             "ἄν",
-             "ἀλλ'",
-             "ἀλλά",
-             "ἄλλος",
-             "ἀπό",
-             "ἄρα",
-             "αὐτός",
-             "δ'",
-             "δέ",
-             "δή",
-             "διά",
-             "δαί",
-             "δαίς",
-             "ἔτι",
-             "ἐγώ",
-             "ἐκ",
-             "ἐμός",
-             "ἐν",
-             "ἐπί",
-             "εἰ",
-             "εἰμί",
-             "εἴμι",
-             "εἰς",
-             "γάρ",
-             "γε",
-             "ἡ",
-             "ἤ",
-             "καί",
-             "κατά",
-             "μέν",
-             "μετά",
-             "μή",
-             "ὁ",
-             "ὅδε",
-             "ὅς",
-             "ὅστις",
-             "ὅτι",
-             "οὕτως",
-             "οὗτος",
-             "οὔτε",
-             "οὖν",
-             "οὐδείς",
-             "οἱ",
-             "οὐ",
-             "οὐδέ",
-             "οὐκ",
-             "περί",
-             "πρός",
-             "σύ",
-             "σύν",
-             "τά",
-             "τε",
-             "τήν",
-             "τῆς",
-             "τῇ",
-             "τι",
-             "τί",
-             "τις",
-             "τίς",
-             "τό",
-             "τοί",
-             "τοιοῦτος",
-             "τόν",
-             "τούς",
-             "τοῦ",
-             "τῶν",
-             "τῷ",
-             "ὑμός",
-             "ὑπέρ",
-             "ὑπό",
-             "ὡς",
-             "ὦ",
-             "ὥστε",
-             "ἐάν",
-             "παρά",
-             "σός"]
+stopwords = [
+    "μή",
+    "ἑαυτοῦ",
+    "ἄν",
+    "ἀλλ'",
+    "ἀλλά",
+    "ἄλλος",
+    "ἀπό",
+    "ἄρα",
+    "αὐτός",
+    "δ'",
+    "δέ",
+    "δή",
+    "διά",
+    "δαί",
+    "δαίς",
+    "ἔτι",
+    "ἐγώ",
+    "ἐκ",
+    "ἐμός",
+    "ἐν",
+    "ἐπί",
+    "εἰ",
+    "εἰμί",
+    "εἴμι",
+    "εἰς",
+    "γάρ",
+    "γε",
+    "ἡ",
+    "ἤ",
+    "καί",
+    "κατά",
+    "μέν",
+    "μετά",
+    "μή",
+    "ὁ",
+    "ὅδε",
+    "ὅς",
+    "ὅστις",
+    "ὅτι",
+    "οὕτως",
+    "οὗτος",
+    "οὔτε",
+    "οὖν",
+    "οὐδείς",
+    "οἱ",
+    "οὐ",
+    "οὐδέ",
+    "οὐκ",
+    "περί",
+    "πρός",
+    "σύ",
+    "σύν",
+    "τά",
+    "τε",
+    "τήν",
+    "τῆς",
+    "τῇ",
+    "τι",
+    "τί",
+    "τις",
+    "τίς",
+    "τό",
+    "τοί",
+    "τοιοῦτος",
+    "τόν",
+    "τούς",
+    "τοῦ",
+    "τῶν",
+    "τῷ",
+    "ὑμός",
+    "ὑπέρ",
+    "ὑπό",
+    "ὡς",
+    "ὦ",
+    "ὥστε",
+    "ἐάν",
+    "παρά",
+    "σός",
+]
 
 
 def simplify_tag(tag):
@@ -123,8 +125,8 @@ def simplify_tag(tag):
     # Derived from examples here:
     # http://nltk.googlecode.com/svn/trunk/doc/api/nltk.tag.simplify-pysrc.html
 
-    if '-' in tag:
-        tag = tag.split('-')[0]
+    if "-" in tag:
+        tag = tag.split("-")[0]
         return tag
     else:
         return tag
@@ -134,24 +136,25 @@ def strip_diacritics(text):
     """Return the given text string with Unicode diacritics removed."""
 
     # http://stackoverflow.com/a/518232
-    decomposed_text = unicodedata.normalize('NFD', text)
-    stripped_text = [char for char in decomposed_text if
-                     unicodedata.category(char) != 'Mn']
-    result_text = ''.join(stripped_text)
+    decomposed_text = unicodedata.normalize("NFD", text)
+    stripped_text = [
+        char for char in decomposed_text if unicodedata.category(char) != "Mn"
+    ]
+    result_text = "".join(stripped_text)
     return result_text
 
 
 def unicode_normalize(text):
     """Return the given text normalized to Unicode NFKC."""
 
-    normalized_text = unicodedata.normalize('NFKC', text)
+    normalized_text = unicodedata.normalize("NFKC", text)
     return normalized_text
 
 
 def final_sigma(text):
     """Return the given text with final sigmas normalized to normal sigmas."""
 
-    result_text = text.replace("\u03C2", "\u03C3")
+    result_text = text.replace("\u03c2", "\u03c3")
     return result_text
 
 
@@ -187,8 +190,8 @@ def remove_elision(text, diacritics=False):
         ("παρ’", "παρα"),
         ("τουτ’", "τουτο"),
         ("υπ’", "υπο"),
-        ("υφ’", "υπο")
-        )
+        ("υφ’", "υπο"),
+    )
 
     if diacritics:
         text = strip_diacritics(text)
@@ -197,6 +200,7 @@ def remove_elision(text, diacritics=False):
     for orig, removed in elisions:
         text = text.replace(orig, removed)
     return text
+
 
 # TODO assimilation - decide scope
 # def remove_assimilation(text):

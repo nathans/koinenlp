@@ -28,13 +28,11 @@ class KoinenlpTest(unittest.TestCase):
         self.assertEqual(case, "C")
 
     def test_strip_diacritics(self):
-        case = koinenlp.strip_diacritics(
-            self.tests["strip_diacritics"]["case"])
+        case = koinenlp.strip_diacritics(self.tests["strip_diacritics"]["case"])
         self.assertEqual(case, self.tests["strip_diacritics"]["result"])
 
     def test_unicode_normalize(self):
-        case = koinenlp.unicode_normalize(
-            self.tests["unicode_normalize"]["case"])
+        case = koinenlp.unicode_normalize(self.tests["unicode_normalize"]["case"])
         self.assertEqual(case, self.tests["unicode_normalize"]["result"])
 
     def test_final_sigma(self):
@@ -57,13 +55,13 @@ class KoinenlpTest(unittest.TestCase):
 
     # Elision when input has diacritics
     def test_remove_elision_3(self):
-        case = koinenlp.remove_elision(self.tests["remove_elision_3"]["case"],
-                                       diacritics=True)
+        case = koinenlp.remove_elision(
+            self.tests["remove_elision_3"]["case"], diacritics=True
+        )
         self.assertEqual(case, self.tests["remove_elision_3"]["result"])
 
     def test_remove_punctuation(self):
-        case = koinenlp.remove_punctuation(
-            self.tests["remove_punctuation"]["case"])
+        case = koinenlp.remove_punctuation(self.tests["remove_punctuation"]["case"])
         self.assertEqual(case, self.tests["remove_punctuation"]["result"])
 
     def test_normalize(self):
@@ -74,5 +72,5 @@ class KoinenlpTest(unittest.TestCase):
         self.tests.clear()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
