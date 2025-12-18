@@ -13,8 +13,7 @@ which combines all of the available methods to produce an end result
 which is suitable for indexing. See the "Using koine-nlp" tutorial and
 the full koinenlp API reference documentation for more.
 
-koine-nlp requires only Python3 (or even Python 2.7) and its standard
-libraries.
+koine-nlp requires only Python3.
 
 Contents
 --------
@@ -29,7 +28,7 @@ Contents
 Authors
 -------
 
-* © 2015, 2016 Nathan D. Smith <nathan@smithfam.info>
+* © 2025 Nathan D. Smith <nathan@smithfam.info>
 
 Software License
 ----------------

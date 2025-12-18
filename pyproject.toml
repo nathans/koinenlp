@@ -1,0 +1,35 @@
+[project]
+name = "koinenlp"
+version = "0.3.0"
+description = "A library for common NLP-related tasks for Koine Greek."
+readme = "README.rst"
+authors = [
+    { name = "Nathan D. Smith", email = "nathan@smithfam.info" }
+]
+requires-python = ">=3.14"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+license = "MIT"
+license-files = ["COPYING"]
+
+[project.scripts]
+koinenlp = "koinenlp:main"
+
+[project.urls]
+Homepage = "http://koine-nlp.nathan.smithfam.info/"
+Documentation = "http://koine-nlp.nathan.smithfam.info/"
+Repository = "https://github.com/nathans/koinenlp"
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "coverage>=7.13.0",
+    "ruff>=0.14.10",
+    "sphinx>=9.0.4",
+]
