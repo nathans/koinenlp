@@ -1,0 +1,9 @@
+COPYING
+MANIFEST.in
+README.rst
+setup.py
+koine_nlp.egg-info/PKG-INFO
+koine_nlp.egg-info/SOURCES.txt
+koine_nlp.egg-info/dependency_links.txt
+koine_nlp.egg-info/top_level.txt
+koinenlp/__init__.py

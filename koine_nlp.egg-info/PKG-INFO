@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: koine-nlp
+Version: 0.2
+Summary: A library for common NLP-related tasks for Koine Greek.
+Home-page: http://koine-nlp.nathan.smithfam.info/
+Author: Nathan D. Smith
+Author-email: nathan@smithfam.info
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Intended Audience :: End Users/Desktop
+License-File: COPYING
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: summary
+
+=========
+koine-nlp
+=========
+
+About
+=====
+
+A library for common NLP-related tasks for Koine
+Greek.
+
+The fullest use of the library comes in the normalize() function,
+which combines all of the available methods to produce an end result
+which is suitable for indexing.
+
+View the `full documentation online <http://koine-nlp.nathan.smithfam.info/>`_.
+
+
+Authors
+=======
+
+* © 2015, 2016 Nathan D. Smith <nathan@smithfam.info>
+
+License
+=======
+
+koine-nlp is released under the terms of the The MIT License
+(MIT). See COPYING for full license text.
